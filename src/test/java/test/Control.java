@@ -16,33 +16,48 @@ public class Control {
         return this.tv;
     }
 	
-	public void turnOn() {
-		this.tv.turnOn();
-	}
-	public void turnOff(){
-        this.tv.turnOff();
+    public void turnOn() {
+        if (this.tv != null) {
+            this.tv.turnOn();
+        }
+    }
+    public void turnOff() {
+        if (this.tv != null) {
+            this.tv.turnOff();
+        }
     }
 	
-	public void canalUp(){
-        this.tv.canalUp();
+    public void canalUp() {
+        if (this.tv != null) {
+            this.tv.canalUp();
+        }
     }
-	public void canalDown(){
-        this.tv.canalDown();
+    public void canalDown() {
+        if (this.tv != null) {
+            this.tv.canalDown();
+        }
     }
-	public void setCanal(int canal){
-        this.tv.setCanal(canal);
+    public void setCanal(int canal) {
+        if (this.tv != null) {
+            this.tv.setCanal(canal);
+        }
     }
 	
-	public void volumenUp(){
-        this.tv.volumenUp();
+	public void volumenUp() {
+        if (this.tv != null) {
+            this.tv.volumenUp();
+        }
+    }
+	public void volumenDown() {
+        if (this.tv != null) {
+            this.tv.volumenDown();
+        }
     }    
-	public void volumenDown(){
-        this.tv.volumenDown();
-    }    
-	public void setVolumen(int volumen){
-        this.tv.setVolumen(volumen);
-    }    
+	public void setVolumen(int volumen) {
+        if (this.tv != null) {
+            this.tv.setVolumen(volumen);
+        }
+    }   
 	
 	
-
 }
