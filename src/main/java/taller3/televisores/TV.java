@@ -1,119 +1,101 @@
 package taller3.televisores;
 
 public class TV {
-	private Marca marca;
-	private int canal;
-	private int precio;
-	private boolean estado;
-	private int volumen;
-	private Control control;
-	
-	
-	private static int numTV=0;
-	
-	
-	public TV (Marca marca,boolean estado) {
-		this.marca=marca;
-		this.estado=estado;
-		this.canal = 1;
+    private Marca marca; 
+    private int canal; 
+    private int precio; 
+    private boolean estado; 
+    private int volumen; 
+    private Control control; 
+    private static int numTV = 0; 
+
+    
+    public TV(Marca marca, boolean estado) {
+        this.marca = marca;
+        this.estado = estado;
+        this.canal = 1; 
         this.volumen = 1;
-        this.precio = 500;
-		numTV++;
-	}
-	
-	
-	public void setMarca(Marca marca) {
-		this.marca=marca;
-	}
-	public Marca getMarca() {
-		return this.marca;
-	}
-	
-	public void setCanal(int canal) {
-		if (this.estado = true) {
-			if (canal>=1 && 120>=canal) {
-				this.canal=canal;
-			}	
-		}
-	}
-	public int getCanal() {
-		return this.canal;
-	}
-	
-	public void setPrecio(int precio) {
-		this.precio=precio;
-	}
-	public int getPrecio() {
-		return this.precio;
-	}
-	
-	public void setVolumen(int volumen) {
-		if (this.estado = true) {
-			if (volumen>0 && 7>volumen) {
-				this.volumen=volumen;
-			}
-		}
-	}
-	public int getVolumen() {
-		return this.volumen;
-	}
-	
-	public void setControl(Control control) {
-		this.control=control;
-	}
-	public Control getControl() {
-		return this.control;
-	}
-	
-	public void setNumTV(int numTV) {
-		this.numTV=numTV;
-	}
-	public int getNumTV() {
-		return numTV;
-	}
+        this.precio = 500; 
+        numTV++; 
+    }
 
-	public void turnOn() {
-		this.estado=true;
-	}
-	public void turnOff() {
+    
+    public Marca getMarca() {
+        return this.marca;
+    }
+    public void setMarca(Marca marca) {
+        this.marca = marca;
+    }
 
-		this.estado=false;
-	}
-	public boolean getEstado() {
-		return this.estado;
-	}
-	
-	public void canalUp() {
-		if (this.estado = true) {
-			if (this.canal>=1 && 120>this.canal) {
-				this.canal++;
-			}
-		}	
-	}
-	public void canalDown(){
-		if (this.estado = true){
-			if (this.canal>1 && 120>=this.canal){
-				this.canal--;
-			}
+    public int getCanal() {
+        return this.canal;
+    }
+    public void setCanal(int canal) {
+        if (this.estado && canal >= 1 && canal <= 120) {
+            this.canal = canal;
+        }
+    }
+    public void canalUp() {
+        if (this.estado && this.canal < 120) {
+            this.canal++;
+        }
+    }
+    public void canalDown() {
+        if (this.estado && this.canal > 1) {
+            this.canal--;
+        }
+    }
 
-		}
-	}
-	
-	public void volumenUp() {
-		if (this.estado = true) {
-			if (this.volumen>=0 && 7>this.volumen) {
-				this.volumen++;
-			}
-		}	
-	}
-	public void volumenDown(){
-		if (this.estado = true){
-			if (this.volumen>0 && 7>=this.volumen){
-				this.volumen--;
-			}
+    public int getPrecio() {
+        return this.precio;
+    }
+    public void setPrecio(int precio) {
+        this.precio = precio;
+    }
 
-		}
-	}
-	
-	
+    public int getVolumen() {
+        return this.volumen;
+    }
+    public void setVolumen(int volumen) {
+        if (this.estado && volumen >= 0 && volumen <= 7) {
+            this.volumen = volumen;
+        }
+    }
+    public void volumenUp() {
+        if (this.estado && this.volumen < 7) {
+            this.volumen++;
+        }
+    }
+    public void volumenDown() {
+        if (this.estado && this.volumen > 0) {
+            this.volumen--;
+        }
+    }
+
+    public Control getControl() {
+        return this.control;
+    }
+    public void setControl(Control control) {
+        this.control = control;
+    }
+
+    public static int getNumTV() {
+        return numTV;
+    }
+    public static void setNumTV(int num) {
+        numTV = num;
+    }
+
+    public void turnOn() {
+        this.estado = true;
+    }
+    public void turnOff() {
+        this.estado = false;
+    }
+
+    public boolean getEstado() {
+        return this.estado;
+    }
+   
+
 }

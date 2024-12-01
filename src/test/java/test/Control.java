@@ -1,21 +1,21 @@
 package test;
 
 public class Control {
-	private TV tv;
-	
-	
-	public void enlazar (TV tv) {
-		this.tv=tv;
-		tv.setControl(this);
-	}
-	
-    public void setTv(TV tv) {
+    private TV tv; 
+
+    
+    public void enlazar(TV tv) {
         this.tv = tv;
+        tv.setControl(this); 
     }
+    
     public TV getTv() {
         return this.tv;
     }
-	
+    public void setTv(TV tv) {
+        this.tv = tv;
+    }
+
     public void turnOn() {
         if (this.tv != null) {
             this.tv.turnOn();
@@ -26,7 +26,7 @@ public class Control {
             this.tv.turnOff();
         }
     }
-	
+
     public void canalUp() {
         if (this.tv != null) {
             this.tv.canalUp();
@@ -37,27 +37,28 @@ public class Control {
             this.tv.canalDown();
         }
     }
+
+    public void volumenUp() {
+        if (this.tv != null) {
+            this.tv.volumenUp();
+        }
+    }
+    public void volumenDown() {
+        if (this.tv != null) {
+            this.tv.volumenDown();
+        }
+    }
+
     public void setCanal(int canal) {
         if (this.tv != null) {
             this.tv.setCanal(canal);
         }
     }
-	
-	public void volumenUp() {
-        if (this.tv != null) {
-            this.tv.volumenUp();
-        }
-    }
-	public void volumenDown() {
-        if (this.tv != null) {
-            this.tv.volumenDown();
-        }
-    }    
-	public void setVolumen(int volumen) {
+    public void setVolumen(int volumen) {
         if (this.tv != null) {
             this.tv.setVolumen(volumen);
         }
-    }   
-	
-	
+    }
+    
+    
 }
